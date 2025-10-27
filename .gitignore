@@ -1,0 +1,13 @@
+# Ignore node modules
+node_modules/
+
+# Ignore Electron build files
+dist/
+out/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore temporary files
+*.log
