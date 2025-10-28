@@ -53,12 +53,29 @@ scene.add(sphere, cube, torus, plane)
 
 // Lighting
 
-const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
+const ambientLight = new THREE.AmbientLight(0x0000ff, 0.5);
 scene.add(ambientLight);
 
-const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-directionalLight.position.set(5, 10, 7);
-scene.add(directionalLight);
+const directionalLight = new THREE.DirectionalLight(0x00ff00, 0.3)
+scene.add(directionalLight)
+
+const hemisphereLight = new THREE.HemisphereLight(0xff0000, 0x0000ff, 0.3)
+scene.add(hemisphereLight)
+
+const pointLight = new THREE.PointLight(0xff9000, 0.5, 10, 2)
+scene.add(pointLight)
+pointLight.position.set(1, - 0.5, 1)
+
+const rectAreaLight = new THREE.RectAreaLight(0x4e00ff, 2, 1, 1)
+scene.add(rectAreaLight)
+rectAreaLight.position.set(- 1.5, 0, 1.5)
+rectAreaLight.lookAt(new THREE.Vector3())
+
+const spotLight = new THREE.SpotLight(0xffff00, 0.8, 10, Math.PI * 0.1,
+0.25, 1)
+spotLight.position.set(0, 2, 3)
+scene.add(spotLight)
+spotLight.target.position.x = - 0.75
 
 
 // Camera 
