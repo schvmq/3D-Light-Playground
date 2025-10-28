@@ -83,13 +83,21 @@ function addRectAreaLight(scene) {
   scene.add(rectAreaLight);
 }
 
-function createSpotLight(scene) {
+function addSpotLight(scene) {
   spotLight = new THREE.SpotLight(0xffff00, 0.8, 10, Math.PI * 0.1, 0.25, 1);
   spotLight.position.set(0, 2, 3);
   spotLight.target.position.x = -0.75;
   scene.add(spotLight);
   scene.add(spotLight.target);
 }
+
+/* functions call for later use*/
+// addAmbientLight(scene);
+// addDirectionalLight(scene);
+// addHemisphereLight(scene);
+// addPointLight(scene);
+// addRectAreaLight(scene);
+// addSpotLight(scene);
 
 
 // Camera 
