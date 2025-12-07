@@ -11,3 +11,131 @@
     height: 100vh;
     outline: none;
 }
+
+.controls {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 8px;
+    border-radius: 6px;
+    color: white;
+    font-family: Arial, sans-serif;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    max-width: 200px;
+}
+
+.controls h3 {
+    margin-bottom: 6px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.light-toggle {
+    padding: 4px 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    font-size: 11px;
+    transition: all 0.2s ease;
+    outline: none;
+    width: 100%;
+    text-align: left;
+}
+
+.light-toggle:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+.light-toggle.active {
+    background: rgba(76, 175, 80, 0.3);
+    border-color: #4CAF50;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+}
+
+.light-toggle:active {
+    transform: translateY(0);
+}
+
+.light-control-item {
+    margin-bottom: 2px;
+}
+
+.slider-panel {
+    display: none;
+    margin-top: 4px;
+    padding: 6px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.slider-panel label {
+    display: block;
+    margin-top: 4px;
+    margin-bottom: 2px;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.slider-panel label:first-child {
+    margin-top: 0;
+}
+
+.slider-panel input[type="range"] {
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 0.2);
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.slider-panel input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.slider-panel input[type="range"]::-webkit-slider-thumb:hover {
+    background: #66BB6A;
+    transform: scale(1.1);
+}
+
+.slider-panel input[type="range"]::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+.slider-panel input[type="range"]::-moz-range-thumb:hover {
+    background: #66BB6A;
+    transform: scale(1.1);
+}
+
+.slider-panel span {
+    color: #4CAF50;
+    font-weight: bold;
+    margin-left: 3px;
+}

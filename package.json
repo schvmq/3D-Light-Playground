@@ -9,9 +9,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  
   "dependencies": {
     "electron": "^38.4.0",
+    "lil-gui": "^0.21.0",
     "three": "^0.180.0"
   }
 }

@@ -3,12 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D CLock App</title>
+    <title>3D Light Playground</title>
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-eval'; style-src 'self' 'unsafe-inline';">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <canvas class="webgl"></canvas>
+    <div class="controls">
+        <h3>Lights</h3>
+        <div class="button-group">
+            <div class="light-control-item">
+                <button id="toggle-ambient" class="light-toggle active">Ambient</button>
+                <div id="slider-ambient" class="slider-panel">
+                    <label>Intensity: <span id="intensity-ambient-value">0.5</span></label>
+                    <input type="range" id="intensity-ambient" min="0" max="2" step="0.1" value="0.5">
+                </div>
+            </div>
+            <div class="light-control-item">
+                <button id="toggle-directional" class="light-toggle active">Directional</button>
+                <div id="slider-directional" class="slider-panel">
+                    <label>Intensity: <span id="intensity-directional-value">0.3</span></label>
+                    <input type="range" id="intensity-directional" min="0" max="2" step="0.1" value="0.3">
+                </div>
+            </div>
+            <div class="light-control-item">
+                <button id="toggle-hemisphere" class="light-toggle active">Hemisphere</button>
+                <div id="slider-hemisphere" class="slider-panel">
+                    <label>Intensity: <span id="intensity-hemisphere-value">0.3</span></label>
+                    <input type="range" id="intensity-hemisphere" min="0" max="2" step="0.1" value="0.3">
+                </div>
+            </div>
+            <div class="light-control-item">
+                <button id="toggle-point" class="light-toggle active">Point</button>
+                <div id="slider-point" class="slider-panel">
+                    <label>Intensity: <span id="intensity-point-value">0.5</span></label>
+                    <input type="range" id="intensity-point" min="0" max="2" step="0.1" value="0.5">
+                </div>
+            </div>
+            <div class="light-control-item">
+                <button id="toggle-rectarea" class="light-toggle active">Rect Area</button>
+                <div id="slider-rectarea" class="slider-panel">
+                    <label>Intensity: <span id="intensity-rectarea-value">2</span></label>
+                    <input type="range" id="intensity-rectarea" min="0" max="10" step="0.1" value="2">
+                </div>
+            </div>
+            <div class="light-control-item">
+                <button id="toggle-spot" class="light-toggle active">Spot</button>
+                <div id="slider-spot" class="slider-panel">
+                    <label>Intensity: <span id="intensity-spot-value">0.8</span></label>
+                    <input type="range" id="intensity-spot" min="0" max="2" step="0.1" value="0.8">
+                </div>
+            </div>
+        </div>
+    </div>
     <script type="module" src="./app.js"></script>
 </body>
 </html>
