@@ -26,6 +26,7 @@ const cube = new THREE.Mesh(
   new THREE.BoxGeometry(0.75, 0.75, 0.75),
   material
 );
+cube.position.y = 1.5;
 
 const torus = new THREE.Mesh(
   new THREE.TorusGeometry(0.3, 0.2, 32, 64),
@@ -231,6 +232,16 @@ window.addEventListener('dblclick', () => {
 const clock = new THREE.Clock();
 
 const tick = () => {
+  const elapsedTime = clock.getElapsedTime();
+
+  sphere.rotation.y = 0.1 * elapsedTime;
+  cube.rotation.y = 0.1 * elapsedTime;
+  torus.rotation.y = 0.1 * elapsedTime;
+  
+  sphere.rotation.x = 0.15 * elapsedTime;
+  cube.rotation.x = 0.15 * elapsedTime;
+  torus.rotation.x = 0.15 * elapsedTime;
+
   // Update controls
   controls.update();
 
