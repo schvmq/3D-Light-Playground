@@ -4,7 +4,8 @@
   "description": "3D Light Playground",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "deploy": "vercel --prod"
   },
   "keywords": [],
   "author": "",
